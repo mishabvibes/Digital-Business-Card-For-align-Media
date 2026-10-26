@@ -19,6 +19,7 @@ import {
   Copy,
   QrCode,
   Sparkles,
+  Star,
   Plus,
   Play,
   Palette,
@@ -97,6 +98,7 @@ const services = [
   },
 ];
 const googleUrl = "https://share.google/uqZaxiRFI70LtAZWz";
+const reviewUrl = "https://g.page/r/CQIfF-eed6cnEBM/review";
 const phone = "+919562827463";
 const navIcons = {
   Home,
@@ -104,12 +106,22 @@ const navIcons = {
   Academy: GraduationCap,
   Connect: MessageCircle,
 };
-function Mark({ small = false }: { small?: boolean }) {
+function Mark({
+  small = false,
+  white = false,
+}: {
+  small?: boolean;
+  white?: boolean;
+}) {
   return (
-    <span className={`mark ${small ? "small" : ""}`} aria-hidden="true">
-      <i />
-      <b />
-    </span>
+    <img
+      className={`brand-logo ${small ? "small" : ""}`}
+      src={white ? "/align-logo-white.png" : "/align-logo-blue.png"}
+      width={small ? 32 : 80}
+      height={small ? 32 : 80}
+      alt=""
+      aria-hidden="true"
+    />
   );
 }
 function Art({
@@ -271,7 +283,6 @@ export default function Page() {
             >
               <Mark small />
               align<span>media</span>
-              
             </a>
             <button
               className="icon-btn mobile-share"
@@ -284,7 +295,7 @@ export default function Page() {
           </div>
           <div className="profile-main">
             <div className="avatar">
-              <Mark />
+              <Mark white />
               <span className="avatar-spark">✳</span>
             </div>
             <div className="profile-name">
@@ -327,6 +338,7 @@ export default function Page() {
                 aria-label="Instagram"
               >
                 <Instagram size={19} />
+                <span>Instagram</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/align-media"
@@ -335,15 +347,18 @@ export default function Page() {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={19} />
+                <span>LinkedIn</span>
               </a>
               <a href={`tel:${phone}`} aria-label="Call Align Media">
                 <Phone size={18} />
+                <span>Call</span>
               </a>
               <a
                 href="mailto:alignmediamkd@gmail.com"
                 aria-label="Email Align Media"
               >
                 <Mail size={19} />
+                <span>Email</span>
               </a>
             </div>
           </div>
@@ -419,10 +434,50 @@ export default function Page() {
                     <span className="tiny-spark">✳</span> Made of ideas. Built
                     for people.
                   </span>
-                  <a href={googleUrl} target="_blank" rel="noreferrer">
-                    Find us on Google <ArrowUpRight size={14} />
+                  <a href={reviewUrl} target="_blank" rel="noreferrer">
+                    Review us <ArrowUpRight size={14} />
                   </a>
                 </div>
+                <section className="review-card" aria-labelledby="review-title">
+                  <div className="review-brand">
+                    <Mark white />
+                    <span>YOUR WORDS. OUR NEXT CHAPTER.</span>
+                    <Star size={24} aria-hidden="true" />
+                  </div>
+                  <div className="review-content">
+                    <div>
+                      <span className="eyebrow">
+                        A LITTLE FEEDBACK GOES A LONG WAY
+                      </span>
+                      <h3 id="review-title">
+                        Created with us?
+                        <br />
+                        Tell the world.
+                      </h3>
+                      <p>
+                        Share your experience with Align Media. Your honest
+                        feedback helps us grow.
+                      </p>
+                    </div>
+                    <a
+                      className="button review-button"
+                      href={reviewUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span className="google-letter" aria-hidden="true">
+                        G
+                      </span>{" "}
+                      Write a Google review <ArrowUpRight size={18} />
+                    </a>
+                  </div>
+                  <div className="review-foot">
+                    <span>Every experience matters.</span>
+                    <span>
+                      Opens Google Reviews <ArrowUpRight size={12} />
+                    </span>
+                  </div>
+                </section>
                 <section className="section">
                   <div className="section-heading">
                     <div>
@@ -752,11 +807,11 @@ export default function Page() {
                     </div>
                     <ArrowUpRight />
                   </a>
-                  <a href={googleUrl} target="_blank" rel="noreferrer">
-                    <Globe />
+                  <a href={reviewUrl} target="_blank" rel="noreferrer">
+                    <Star />
                     <div>
                       <h4>Your experience matters</h4>
-                      <span>Read or leave a review on Google</span>
+                      <span>Write a Google review</span>
                     </div>
                     <ArrowUpRight />
                   </a>

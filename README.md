@@ -44,7 +44,7 @@ No enquiries are stored or sent automatically. Visitors review and send their dr
 
 ## Content to replace before public launch
 
-- The geometric logo and four clearly labelled portfolio concepts are original provisional visuals, not the official logo or actual client work.
+- The supplied blue and white Align Media logos are used throughout the card and app icons. The four clearly labelled portfolio concepts remain illustrative, not actual client work.
 - Supply real portfolio images/videos, course syllabus, fees, batches and approved testimonials if desired.
 - Phone/address were read from the public Google business listing; email was present in the public Facebook search result. Confirm these business contacts before launch.
 - The supplied `alignmedia.rf.gd` could not be loaded and Google lists `alignmedias.com`; website navigation is intentionally omitted until the canonical domain is confirmed.

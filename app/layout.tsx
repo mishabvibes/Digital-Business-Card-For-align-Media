@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Good ideas deserve great design. Let’s create, learn and grow together in Mannarkkad.",
     images: ["/social-card.png"],
   },
-  icons: { icon: "/icon.svg", apple: "/apple-icon.png" },
+  icons: { icon: "/icon-512.png", apple: "/apple-icon.png" },
 };
 export const viewport: Viewport = {
   width: "device-width",
